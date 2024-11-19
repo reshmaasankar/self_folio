@@ -14,10 +14,13 @@ function Intro() {
           <Image src='/reshma_photo.jpg' alt='Reshma' width={192} height={192} className='h-24 w-24 rounded-full border-[0.35rem] border-white' />
         </motion.div>
       </div>
-      <motion.p className='font-bold mb-10 mt-2 px-4 text-2xl'
+      <motion.p className='mb-10 mt-2 px-4 text-xl'
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-      >Hello, I am Reshma - a Front end developer wih more than 8 years of experince.</motion.p>
+      >Hello, I'm <span className='font-bold '>Reshma, Front-end Developer</span> with over <span className='font-bold '>8 years </span>of experience.
+       I specialize in creating intuitive, responsive web applications using <span className='font-bold '>HTML, CSS, JavaScript, React, Next JS and Angular. </span> 
+       Passionate about delivering seamless user experiences and writing clean, efficient code, 
+      I’m always excited to tackle new challenges and keep up with the latest trends in web development.</motion.p>
       
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4  font-medium"

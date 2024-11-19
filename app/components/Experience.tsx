@@ -20,9 +20,9 @@ function Experience() {
                             date={exp.year}
                             iconStyle={{ background: '#f3f4f6'}}
                         >
-                            <h3 className="vertical-timeline-element-title">{exp.compnay}</h3>
-                            <h4 className="vertical-timeline-element-subtitle">{exp.title}</h4>
-                            <p>
+                            <h3 className="vertical-timeline-element-title text-blue-800 font-bold">{exp.compnay}</h3>
+                            <h4 className="vertical-timeline-element-subtitle text-blue-800 font-bold">{exp.title}</h4>
+                            <p className="font-medium italic">
                                 {exp.description}
                             </p>
                         </VerticalTimelineElement>

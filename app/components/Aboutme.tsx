@@ -18,7 +18,7 @@ function Aboutme() {
                  where I developed strong technical foundations and contributed to various projects.
                 In 2019, I joined EY (Ernst & Young) and currently work as a Senior Consultant, specializing in front-end development. 
                 In my role, I design and build user-friendly, responsive web applications that deliver seamless experiences for clients. 
-                My work at EY involves collaborating with cross-functional teams to create innovative solutions, and I continuously strive to enhance
+                My work at EY involves collaborating with cross-functional teams to create innovative solutions, while also leading a team to drive project success. I continuously strive to enhance
                  my skills and stay ahead of the latest industry trends.
             </p>
         </motion.section>
