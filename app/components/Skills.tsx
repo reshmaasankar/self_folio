@@ -16,7 +16,7 @@ function Skills() {
         <Headersection>Skills</Headersection>
         <ul className='flex flex-wrap gap-5 justify-center items-center text-gray-800'>
           {skills.map((skill, i) => (
-            <li className='bg-white border border-black/[0.1] rounded-xl border-gray-500 px-4 py-2  text-sm' key={i}>{skill}</li>
+            <li className='bg-white border border-black/[0.1] rounded-xl border-gray-500 px-4 py-2  text-sm dark:bg-white/10 dark:text-white' key={i}>{skill}</li>
           ))}
         </ul>
        

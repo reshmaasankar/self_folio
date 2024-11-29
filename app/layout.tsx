@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/Header";
+import TheamSwitch from "./components/TheamSwitch";
+import ThemeContextProvider from "./context/theme-context";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,10 +29,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-200 relative pt-28 sm:pt-36`}>
-          <div className="bg-green-300 absolute top-[-6rem] right-[30%] h-[32rem] w-[32rem] rounded-full blur-[10rem] -z-10"></div>
-        <Header />
-        {children}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-200 relative pt-28 sm:pt-36 dark:text-gray-300 dark:bg-gray-900`}>
+        <div className="bg-green-300 absolute top-[-6rem] right-[30%] h-[32rem] w-[32rem] rounded-full blur-[10rem] -z-10"></div>
+        <ThemeContextProvider>
+          <Header />
+          {children}
+          <TheamSwitch />
+        </ThemeContextProvider>
       </body>
     </html>
   );

@@ -26,7 +26,7 @@ function Contact() {
         >
           <Headersection>Contact me</Headersection>
     
-          <p className="text-gray-700 -mt-6 ">
+          <p className="text-gray-700 -mt-6 dark:text-gray-300">
             Please contact me directly at{" "}
             <a className="underline" href="mailto:reshusankar@gmail.com">
             reshusankar@gmail.com
@@ -48,7 +48,7 @@ function Contact() {
               }}
           >
             <input
-              className="h-14 px-4 rounded-lg borderBlack"
+              className="h-14 px-4 rounded-lg borderBlack dark:bg-gray-300"
               name="senderEmail"
               type="email"
               required
@@ -56,7 +56,7 @@ function Contact() {
               placeholder="Your email"
             />
             <textarea
-              className="h-52 my-3 rounded-lg borderBlack p-4 "
+              className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-gray-300 "
               name="message"
               placeholder="Your message"
               required
