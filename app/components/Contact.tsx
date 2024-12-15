@@ -38,12 +38,10 @@ function Contact() {
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
-          console.log('data is', data, error)
           if (error) {
             toast.error(error);
             return;
           }
-          console.log('hiihih')
           toast.success("Email sent successfully!");
         }}
       >
