@@ -43,7 +43,7 @@ function Contact() {
             toast.error(error);
             return;
           }
-
+          console.log('hiihih')
           toast.success("Email sent successfully!");
         }}
       >
