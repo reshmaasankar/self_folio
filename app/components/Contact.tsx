@@ -1,14 +1,22 @@
 "use client";
 
-import React from 'react'
+import React, { useState } from 'react'
 import Headersection from './Headersection'
 
 import { motion } from "motion/react"
-import toast from "react-hot-toast";
 import SubmitBtn from './SubmitBtn';
 import { sendEmail } from '../actions/sendEmail';
+import Modal from './Modal';
 
 function Contact() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [popupText, setPopupText] = useState('');
+
+  const togglePopup = (txt: string) => {
+    setPopupText(txt);
+    setIsOpen(!isOpen);
+  };
+
   return (
     <motion.section
       id="contactme"
@@ -39,10 +47,16 @@ function Contact() {
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
           if (error) {
-            toast.error(error);
+            togglePopup('Error occured');
+            setTimeout(() => {
+              setIsOpen(false)
+            }, 3000);
             return;
           }
-          toast.success("Email sent successfully!");
+          togglePopup('Email sent successfully!');
+          setTimeout(() => {
+            setIsOpen(false)
+          }, 3000);
         }}
       >
         <input
@@ -61,6 +75,9 @@ function Contact() {
           maxLength={5000}
         />
         <SubmitBtn />
+        {isOpen && (
+        <Modal text={popupText} togglePopup={togglePopup} />
+      )}
       </form>
     </motion.section>
   );
